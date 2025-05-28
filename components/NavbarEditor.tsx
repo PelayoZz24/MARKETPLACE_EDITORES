@@ -6,18 +6,33 @@ import LogoutButton from './LogoutButton'
 
 export default function NavbarEditor() {
   return (
-    <nav className="flex items-center justify-between px-6 py-4 bg-white shadow">
-      <Link href="/" className="text-2xl font-bold text-gray-800">
-        VideoMarket
+    <nav className="w-full flex items-center justify-between px-4 md:px-8 py-3 bg-white border-b shadow-sm sticky top-0 z-30">
+      {/* Logo */}
+      <Link
+        href="/"
+        className="flex items-center gap-2 text-primary-editor text-2xl md:text-3xl font-bold tracking-tight hover:opacity-80"
+      >
+        <span className="hidden md:inline text-gray-900">VideoMarket</span>
+        <span className="md:hidden text-gray-900">VM</span>
       </Link>
 
-      <div className="flex space-x-4 items-center">
+      {/* Acciones */}
+      <div className="flex items-center gap-2 md:gap-4">
+        {/* NUEVO botón */}
+        <Link
+          href="/editor/create-offer"
+          className="bg-green-600 text-white px-4 py-2 rounded-lg font-semibold shadow hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-500"
+        >
+          Crear oferta
+        </Link>
+
         <Link
           href="/profile"
-          className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition"
+          className="bg-primary-editor text-white px-4 py-2 rounded-lg font-semibold shadow hover:bg-primary-editor/80 focus:outline-none focus:ring-2 focus:ring-primary-editor"
         >
           Mi perfil
         </Link>
+
         <LogoutButton />
       </div>
     </nav>

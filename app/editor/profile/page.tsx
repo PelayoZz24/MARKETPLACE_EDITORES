@@ -1,4 +1,4 @@
-// app/editor/dashboard/page.tsx
+// app/editor/profile/page.tsx
 'use client'
 
 import { useEffect, useState } from 'react'

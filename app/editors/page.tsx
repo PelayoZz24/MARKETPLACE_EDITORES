@@ -1,7 +1,7 @@
 'use client'
 
 import { useEffect, useState } from 'react'
-import { supabase } from '../../lib/supabase'
+import { supabase } from '../lib/supabase'
 import Link from 'next/link'
 import PerfilButton from '@/components/PerfilButton'
 
@@ -14,7 +14,8 @@ type EditorProfile = {
   experience_years: number
 }
 
-export default function EditorsPage() {
+// Página de exploración de editores
+export default async function Page() {
   const [editors, setEditors] = useState<EditorProfile[]>([])
   const [filtered, setFiltered] = useState<EditorProfile[]>([])
   const [search, setSearch] = useState('')
